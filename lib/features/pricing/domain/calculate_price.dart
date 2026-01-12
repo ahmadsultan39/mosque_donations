@@ -102,7 +102,7 @@ double calculatePrice({
     final tempTotal = total;
     total -= calculateStructuralConditionRatio(tempTotal, values);
     total -= calculateArchitecturalConditionRatio(tempTotal, values);
-    total -= calculateDecorConditionRatio(tempTotal, values);
+    // total -= calculateDecorConditionRatio(tempTotal, values);
     total -= calculateHVACConditionRatio(tempTotal, values);
     total -= calculateElectricConditionRatio(tempTotal, values);
     total -= calculateRenewablePowerConditionRatio(tempTotal, values);
@@ -187,10 +187,10 @@ double calculateStructuralConditionRatio(
   Map<String, dynamic> values,
 ) {
   if (_toBool(values["structural_condition"])) {
-    return total * 0.3;
+    return total * 0.35;
   } else {
-    return total * 0.3 -
-        (total * 0.3 * (_toDouble(values["structural_damage_percent"]) / 100));
+    return total * 0.35 -
+        (total * 0.35 * (_toDouble(values["structural_damage_percent"]) / 100));
   }
 }
 
@@ -206,14 +206,14 @@ double calculateArchitecturalConditionRatio(
   }
 }
 
-double calculateDecorConditionRatio(double total, Map<String, dynamic> values) {
-  if (_toBool(values["decor_presence"])) {
-    return total * 0.1;
-  } else {
-    return total * 0.1 -
-        (total * 0.1 * (_toDouble(values["decor_missing_percent"]) / 100));
-  }
-}
+// double calculateDecorConditionRatio(double total, Map<String, dynamic> values) {
+//   if (_toBool(values["decor_presence"])) {
+//     return total * 0.1;
+//   } else {
+//     return total * 0.1 -
+//         (total * 0.1 * (_toDouble(values["decor_missing_percent"]) / 100));
+//   }
+// }
 
 double calculateHVACConditionRatio(double total, Map<String, dynamic> values) {
   if (_toBool(values["hvac_presence"])) {
@@ -228,10 +228,10 @@ double calculateElectricConditionRatio(
   Map<String, dynamic> values,
 ) {
   if (_toBool(values["electric_presence"])) {
-    return total * 0.1;
+    return total * 0.11;
   } else {
-    return total * 0.1 -
-        (total * 0.1 * (_toDouble(values["electric_missing_percent"]) / 100));
+    return total * 0.11 -
+        (total * 0.11 * (_toDouble(values["electric_missing_percent"]) / 100));
   }
 }
 
@@ -261,9 +261,9 @@ double calculateMinaretConditionRatio(
 
 double calculateWaterConditionRatio(double total, Map<String, dynamic> values) {
   if (_toBool(values["water_condition"])) {
-    return total * 0.07;
+    return total * 0.06;
   } else {
-    return total * 0.07 -
-        (total * 0.07 * (_toDouble(values["water_damage_percent"]) / 100));
+    return total * 0.06 -
+        (total * 0.06 * (_toDouble(values["water_damage_percent"]) / 100));
   }
 }
