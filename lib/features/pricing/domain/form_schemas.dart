@@ -75,7 +75,7 @@ class FormSchemas {
       // ),
       // FormFieldSpec(
       //   id: 'decor_missing_percent',
-      //   labelAr: 'النسبة المئوية',
+      //   labelAr: 'نسبة الضرر المئوية',
       //   type: FieldType.number,
       //   dependsOn: 'decor_presence',
       //   dependsOnEquals: 'غير موجود',
@@ -99,7 +99,7 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'electric_missing_percent',
-        labelAr: 'النسبة المئوية',
+        labelAr: 'نسبة الضرر المئوية',
         type: FieldType.number,
         dependsOn: 'electric_presence',
         dependsOnEquals: 'غير موجود',
@@ -114,7 +114,7 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'renewable_missing_percent',
-        labelAr: 'النسبة المئوية',
+        labelAr: 'نسبة الضرر المئوية',
         type: FieldType.number,
         dependsOn: 'renewable_presence',
         dependsOnEquals: 'غير موجود',
@@ -170,7 +170,7 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'sharia_institute',
-        labelAr: 'معهد شرعي',
+        labelAr: 'معهد شرعي (عدد الصفوف)',
         type: FieldType.dropdown,
         options: ['0', '8', '16', '24'],
       ),
@@ -185,7 +185,7 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'imam_house',
-        labelAr: 'بيت إمام',
+        labelAr: 'بيت إمام (عدد الشقق السكنية)',
         type: FieldType.dropdown,
         options: ['1', '2', '3'],
       ),
@@ -271,7 +271,7 @@ class FormSchemas {
       // ),
       // FormFieldSpec(
       //   id: 'decor_missing_percent',
-      //   labelAr: 'النسبة المئوية',
+      //   labelAr: 'نسبة الضرر المئوية',
       //   type: FieldType.number,
       //   dependsOn: 'decor_presence',
       //   dependsOnEquals: 'غير موجود',
@@ -295,7 +295,7 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'electric_missing_percent',
-        labelAr: 'النسبة المئوية',
+        labelAr: 'نسبة الضرر المئوية',
         type: FieldType.number,
         dependsOn: 'electric_presence',
         dependsOnEquals: 'غير موجود',
@@ -310,7 +310,7 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'renewable_missing_percent',
-        labelAr: 'النسبة المئوية',
+        labelAr: 'نسبة الضرر المئوية',
         type: FieldType.number,
         dependsOn: 'renewable_presence',
         dependsOnEquals: 'غير موجود',
@@ -366,7 +366,7 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'sharia_institute',
-        labelAr: 'معهد شرعي',
+        labelAr: 'معهد شرعي (عدد الصفوف)',
         type: FieldType.dropdown,
         options: ['0', '8', '16', '24'],
       ),
@@ -381,7 +381,7 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'imam_house',
-        labelAr: 'بيت إمام',
+        labelAr: 'بيت إمام (عدد الشقق السكنية)',
         type: FieldType.dropdown,
         options: ['1', '2', '3'],
       ),
@@ -502,7 +502,7 @@ class FormSchemas {
       // ),
       // FormFieldSpec(
       //   id: 'decor_missing_percent',
-      //   labelAr: 'النسبة المئوية',
+      //   labelAr: 'نسبة الضرر المئوية',
       //   type: FieldType.number,
       //   dependsOn: 'decor_presence',
       //   dependsOnEquals: 'غير موجود',
@@ -526,7 +526,7 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'electric_missing_percent',
-        labelAr: 'النسبة المئوية',
+        labelAr: 'نسبة الضرر المئوية',
         type: FieldType.number,
         dependsOn: 'electric_presence',
         dependsOnEquals: 'غير موجود',
@@ -541,7 +541,7 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'renewable_missing_percent',
-        labelAr: 'النسبة المئوية',
+        labelAr: 'نسبة الضرر المئوية',
         type: FieldType.number,
         dependsOn: 'renewable_presence',
         dependsOnEquals: 'غير موجود',
@@ -597,7 +597,7 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'sharia_institute',
-        labelAr: 'معهد شرعي',
+        labelAr: 'معهد شرعي (عدد الصفوف)',
         type: FieldType.dropdown,
         options: ['0', '8', '16', '24'],
       ),
@@ -612,7 +612,7 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'imam_house',
-        labelAr: 'بيت إمام',
+        labelAr: 'بيت إمام (عدد الشقق السكنية)',
         type: FieldType.dropdown,
         options: ['1', '2', '3'],
       ),
@@ -733,7 +733,7 @@ class FormSchemas {
       // ),
       // FormFieldSpec(
       //   id: 'decor_missing_percent',
-      //   labelAr: 'النسبة المئوية',
+      //   labelAr: 'نسبة الضرر المئوية',
       //   type: FieldType.number,
       //   dependsOn: 'decor_presence',
       //   dependsOnEquals: 'غير موجود',
@@ -757,7 +757,7 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'electric_missing_percent',
-        labelAr: 'النسبة المئوية',
+        labelAr: 'نسبة الضرر المئوية',
         type: FieldType.number,
         dependsOn: 'electric_presence',
         dependsOnEquals: 'غير موجود',
@@ -772,7 +772,7 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'renewable_missing_percent',
-        labelAr: 'النسبة المئوية',
+        labelAr: 'نسبة الضرر المئوية',
         type: FieldType.number,
         dependsOn: 'renewable_presence',
         dependsOnEquals: 'غير موجود',
@@ -821,13 +821,13 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'sharia_institute',
-        labelAr: 'معهد شرعي',
+        labelAr: 'معهد شرعي (عدد الصفوف)',
         type: FieldType.dropdown,
         options: ['0', '8', '16', '24'],
       ),
       FormFieldSpec(
         id: 'imam_house',
-        labelAr: 'بيت إمام',
+        labelAr: 'بيت إمام (عدد الشقق السكنية)',
         type: FieldType.dropdown,
         options: ['1', '2', '3'],
       ),
