@@ -13,7 +13,7 @@ class MosqueTypes {
 اﻟﻮاﺟﻬﺔ: اﺳﺘﺨﺪام اﻟﻄﻮب أو اﻷﺳﻤﻨﺖ اﻷﺑﻴﺾ (وﻓﻘﺎً ﻟـ "ﻟﻮﺣﺔ اﻷﻟﻮان" ﻓﻲ اﻟﻜﺘﺎب: أﺑﻴﺾ ﻛﻠﺴﻲ).
 اﻟﺼﻮﺗﻴﺎت: ﻧﻈﺎم ﺻﻮﺗﻲ ﻣﻨﺰﻟﻲ ﺑﺴﻴﻂ (ﺳﻤﺎﻋﺔ داﺧﻠﻴﺔ واﺣﺪة).
     ''',
-    imageUrl: 'assets/images/musalla.png',
+    imageUrl: 'assets/images/musalla.jpeg',
   );
 
   static const small = MosqueType(
@@ -26,7 +26,7 @@ class MosqueTypes {
 اﻟﻤﺤﺮاب: ﻣﺤﺮاب ﻣﺰﻳﻦ ﺑﺨﻂ "اﻟﺜﻠﺚ" وﻛﺎﺷﻲ ﻣﺤﺪود (ﻓﻴﺮوزي دﻣﺸﻘﻲ).
 اﻟﺼﻮﺗﻴﺎت: اﺳﺘﺨﺪام ﻣﻮاد ﻣﺎﺻﺔ ﻟﻠﺼﻮت ﻓﻲ اﻟﺠﺪران اﻟﺨﻠﻔﻴﺔ ﻟﻤﻨﻊ اﻟﺼﺪى (ﻧﻈﺮاً ﻟﺼﻐﺮ اﻟﺤﺠﻢ وﺳﺮﻋﺔ ارﺗﺪاد اﻟﺼﻮت).
     ''',
-    imageUrl: 'assets/images/small.png',
+    imageUrl: 'assets/images/small.jpg',
   );
 
   static const medium = MosqueType(
@@ -40,7 +40,7 @@ class MosqueTypes {
 اﻷﻟﻮان: ﻣﺰﻳﺞ ﻣﻦ اﻟﺤﺠﺮ اﻟﻜﺮﻳﻤﻲ/اﻟﻌﻈﻤﻲ ﻣﻊ ﺗﻔﺎﺻﻴﻞ ﺧﺸﺒﻴﺔ (وﻓﻖ ﻟﻮﺣﺔ اﻷﻟﻮان اﻟﻤﻘﺘﺮﺣﺔ).
 اﻟﻬﻮﻳﺔ اﻹدارﻳﺔ: ﺗﺨﺼﻴﺺ ﻏﺮﻓﺔ ﻟـ "ﻟﺠﻨﺔ اﻟﻤﺴﺠﺪ".
     ''',
-    imageUrl: 'assets/images/medium.png',
+    imageUrl: 'assets/images/medium.jpg',
   );
 
   static const large = MosqueType(
@@ -53,14 +53,14 @@ class MosqueTypes {
 اﻹﺿﺎءة: ﺗﺼﻤﻴﻢ اﻹﺿﺎءة اﻟﻨﻬﺎرﻳﺔ (Daylighting) ﻋﺒﺮ ﻧﻮاﻓﺬ رﻗﺒﺔ اﻟﻘﺒﺔ ﻹﺿﻔﺎء ﻃﺎﺑﻊ روﺣﺎﻧﻲ.
 اﻟﺼﻮﺗﻴﺎت: ﺗﺼﻤﻴﻢ ﺻﻮﺗﻲ ﻫﻨﺪﺳﻲ ﻣﺘﺨﺼﺺ (Acoustic Design)؛ ﺷﻜﻞ اﻟﻘﺒﺔ واﻟﺠﺪران ﻳﺠﺐ أن ﻳﻮزع اﻟﺼﻮت ﺑﺸﻜﻞ ﻃﺒﻴﻌﻲ.
     ''',
-    imageUrl: 'assets/images/large.png',
+    imageUrl: 'assets/images/large.jpg',
   );
 
   static const expansion = MosqueType(
     id: 'expansion',
     nameAr: 'توسعة',
     descriptionAr: "",
-    imageUrl: 'assets/images/expansion.png',
+    imageUrl: 'assets/images/expansion.jpg',
   );
 
   static const all = [musalla, small, medium, large, expansion];

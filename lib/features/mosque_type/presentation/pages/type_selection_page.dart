@@ -44,7 +44,7 @@ class TypeSelectionPage extends StatelessWidget {
                             height: 140,
                             child: Image.asset(
                               t.imageUrl,
-                              fit: BoxFit.cover,
+                              fit: BoxFit.contain,
                               errorBuilder: (_, __, ___) =>
                                   Center(child: Icon(Icons.error, size: 48)),
                             ),

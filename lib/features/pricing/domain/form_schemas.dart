@@ -5,6 +5,11 @@ class FormSchemas {
     typeId: 'musalla',
     fields: [
       FormFieldSpec(
+        id: 'mosque_name',
+        labelAr: 'اسم المسجد',
+        type: FieldType.text,
+      ),
+      FormFieldSpec(
         id: 'area',
         labelAr: 'المساحة بالمتر المربع',
         type: FieldType.number,
@@ -30,7 +35,8 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'structural_condition',
-        labelAr: 'أعمال إنشائية (هبكل خرسانة, رقبة, أساسات, بلاطة سقف, جوائز, صب نطافة, رافعة معدنية, خزانات بيتونية تحت الأرض)',
+        labelAr:
+            'أعمال إنشائية (هبكل خرسانة, رقبة, أساسات, بلاطة سقف, جوائز, صب نطافة, رافعة معدنية, خزانات بيتونية تحت الأرض)',
         type: FieldType.dropdown,
         options: ['سليم', 'بحاجة إلى ترميم'],
         dependsOn: 'needs_renovation',
@@ -45,7 +51,8 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'architectural_condition',
-        labelAr: 'أعمال معمارية وديكور (بلوك, لياسة, عزل, أرضيات, أبواب, شبابيك, تلبيس الحجر, دهان, محراب, ممبر, سجاد, زخارف, ديكورات حديثة, خزن مصاحف ومكتبة\n خزن أحذية, كراسي, ثريات, طاولات مصاحف, عوامل مائية وحديقة)',
+        labelAr:
+            'أعمال معمارية وديكور (بلوك, لياسة, عزل, أرضيات, أبواب, شبابيك, تلبيس الحجر, دهان, محراب, ممبر, سجاد, زخارف, ديكورات حديثة, خزن مصاحف ومكتبة\n خزن أحذية, كراسي, ثريات, طاولات مصاحف, عوامل مائية وحديقة)',
         type: FieldType.dropdown,
         options: ['سليم', 'غير سليم'],
         dependsOn: 'needs_renovation',
@@ -83,7 +90,8 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'electric_presence',
-        labelAr: 'الكهرباء والتيار الخفيف (إنارة, صوت, كاميرات إنذار حريق, قواطع)',
+        labelAr:
+            'الكهرباء والتيار الخفيف (إنارة, صوت, كاميرات إنذار حريق, قواطع)',
         type: FieldType.dropdown,
         options: ['موجود', 'غير موجود'],
         dependsOn: 'needs_renovation',
@@ -128,7 +136,8 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'water_condition',
-        labelAr: 'العوامل المائية (موضأ, حمامات, تصريف مطري, سقاية الحديقة, خزانات مياه ومضخات)',
+        labelAr:
+            'العوامل المائية (موضأ, حمامات, تصريف مطري, سقاية الحديقة, خزانات مياه ومضخات)',
         type: FieldType.dropdown,
         options: ['سليم', 'غير سليم'],
         dependsOn: 'needs_renovation',
@@ -147,6 +156,11 @@ class FormSchemas {
   static const small = FormSchema(
     typeId: 'small',
     fields: [
+      FormFieldSpec(
+        id: 'mosque_name',
+        labelAr: 'اسم المسجد',
+        type: FieldType.text,
+      ),
       FormFieldSpec(
         id: 'area',
         labelAr: 'المساحة بالمتر المربع',
@@ -217,7 +231,8 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'structural_condition',
-        labelAr: 'أعمال إنشائية (هبكل خرسانة, رقبة, أساسات, بلاطة سقف, جوائز, صب نطافة, رافعة معدنية, خزانات بيتونية تحت الأرض)',
+        labelAr:
+            'أعمال إنشائية (هبكل خرسانة, رقبة, أساسات, بلاطة سقف, جوائز, صب نطافة, رافعة معدنية, خزانات بيتونية تحت الأرض)',
         type: FieldType.dropdown,
         options: ['سليم', 'بحاجة إلى ترميم'],
         dependsOn: 'needs_renovation',
@@ -232,7 +247,8 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'architectural_condition',
-        labelAr: 'أعمال معمارية وديكور (بلوك, لياسة, عزل, أرضيات, أبواب, شبابيك, تلبيس الحجر, دهان, محراب, ممبر, سجاد, زخارف, ديكورات حديثة, خزن مصاحف ومكتبة\n خزن أحذية, كراسي, ثريات, طاولات مصاحف, عوامل مائية وحديقة)',
+        labelAr:
+            'أعمال معمارية وديكور (بلوك, لياسة, عزل, أرضيات, أبواب, شبابيك, تلبيس الحجر, دهان, محراب, ممبر, سجاد, زخارف, ديكورات حديثة, خزن مصاحف ومكتبة\n خزن أحذية, كراسي, ثريات, طاولات مصاحف, عوامل مائية وحديقة)',
         type: FieldType.dropdown,
         options: ['سليم', 'غير سليم'],
         dependsOn: 'needs_renovation',
@@ -270,7 +286,8 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'electric_presence',
-        labelAr: 'الكهرباء والتيار الخفيف (إنارة, صوت, كاميرات إنذار حريق, قواطع)',
+        labelAr:
+            'الكهرباء والتيار الخفيف (إنارة, صوت, كاميرات إنذار حريق, قواطع)',
         type: FieldType.dropdown,
         options: ['موجود', 'غير موجود'],
         dependsOn: 'needs_renovation',
@@ -315,7 +332,8 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'water_condition',
-        labelAr: 'العوامل المائية (موضأ, حمامات, تصريف مطري, سقاية الحديقة, خزانات مياه ومضخات)',
+        labelAr:
+            'العوامل المائية (موضأ, حمامات, تصريف مطري, سقاية الحديقة, خزانات مياه ومضخات)',
         type: FieldType.dropdown,
         options: ['سليم', 'غير سليم'],
         dependsOn: 'needs_renovation',
@@ -334,6 +352,11 @@ class FormSchemas {
   static const medium = FormSchema(
     typeId: 'medium',
     fields: [
+      FormFieldSpec(
+        id: 'mosque_name',
+        labelAr: 'اسم المسجد',
+        type: FieldType.text,
+      ),
       FormFieldSpec(
         id: 'area',
         labelAr: 'المساحة بالمتر المربع',
@@ -439,7 +462,8 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'structural_condition',
-        labelAr: 'أعمال إنشائية (هبكل خرسانة, رقبة, أساسات, بلاطة سقف, جوائز, صب نطافة, رافعة معدنية, خزانات بيتونية تحت الأرض)',
+        labelAr:
+            'أعمال إنشائية (هبكل خرسانة, رقبة, أساسات, بلاطة سقف, جوائز, صب نطافة, رافعة معدنية, خزانات بيتونية تحت الأرض)',
         type: FieldType.dropdown,
         options: ['سليم', 'بحاجة إلى ترميم'],
         dependsOn: 'needs_renovation',
@@ -454,7 +478,8 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'architectural_condition',
-        labelAr: 'أعمال معمارية وديكور (بلوك, لياسة, عزل, أرضيات, أبواب, شبابيك, تلبيس الحجر, دهان, محراب, ممبر, سجاد, زخارف, ديكورات حديثة, خزن مصاحف ومكتبة\n خزن أحذية, كراسي, ثريات, طاولات مصاحف, عوامل مائية وحديقة)',
+        labelAr:
+            'أعمال معمارية وديكور (بلوك, لياسة, عزل, أرضيات, أبواب, شبابيك, تلبيس الحجر, دهان, محراب, ممبر, سجاد, زخارف, ديكورات حديثة, خزن مصاحف ومكتبة\n خزن أحذية, كراسي, ثريات, طاولات مصاحف, عوامل مائية وحديقة)',
         type: FieldType.dropdown,
         options: ['سليم', 'غير سليم'],
         dependsOn: 'needs_renovation',
@@ -492,7 +517,8 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'electric_presence',
-        labelAr: 'الكهرباء والتيار الخفيف (إنارة, صوت, كاميرات إنذار حريق, قواطع)',
+        labelAr:
+            'الكهرباء والتيار الخفيف (إنارة, صوت, كاميرات إنذار حريق, قواطع)',
         type: FieldType.dropdown,
         options: ['موجود', 'غير موجود'],
         dependsOn: 'needs_renovation',
@@ -537,7 +563,8 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'water_condition',
-        labelAr: 'العوامل المائية (موضأ, حمامات, تصريف مطري, سقاية الحديقة, خزانات مياه ومضخات)',
+        labelAr:
+            'العوامل المائية (موضأ, حمامات, تصريف مطري, سقاية الحديقة, خزانات مياه ومضخات)',
         type: FieldType.dropdown,
         options: ['سليم', 'غير سليم'],
         dependsOn: 'needs_renovation',
@@ -556,6 +583,11 @@ class FormSchemas {
   static const large = FormSchema(
     typeId: 'large',
     fields: [
+      FormFieldSpec(
+        id: 'mosque_name',
+        labelAr: 'اسم المسجد',
+        type: FieldType.text,
+      ),
       FormFieldSpec(
         id: 'area',
         labelAr: 'المساحة بالمتر المربع',
@@ -661,7 +693,8 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'structural_condition',
-        labelAr: 'أعمال إنشائية (هبكل خرسانة, رقبة, أساسات, بلاطة سقف, جوائز, صب نطافة, رافعة معدنية, خزانات بيتونية تحت الأرض)',
+        labelAr:
+            'أعمال إنشائية (هبكل خرسانة, رقبة, أساسات, بلاطة سقف, جوائز, صب نطافة, رافعة معدنية, خزانات بيتونية تحت الأرض)',
         type: FieldType.dropdown,
         options: ['سليم', 'بحاجة إلى ترميم'],
         dependsOn: 'needs_renovation',
@@ -676,7 +709,8 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'architectural_condition',
-        labelAr: 'أعمال معمارية وديكور (بلوك, لياسة, عزل, أرضيات, أبواب, شبابيك, تلبيس الحجر, دهان, محراب, ممبر, سجاد, زخارف, ديكورات حديثة, خزن مصاحف ومكتبة\n خزن أحذية, كراسي, ثريات, طاولات مصاحف, عوامل مائية وحديقة)',
+        labelAr:
+            'أعمال معمارية وديكور (بلوك, لياسة, عزل, أرضيات, أبواب, شبابيك, تلبيس الحجر, دهان, محراب, ممبر, سجاد, زخارف, ديكورات حديثة, خزن مصاحف ومكتبة\n خزن أحذية, كراسي, ثريات, طاولات مصاحف, عوامل مائية وحديقة)',
         type: FieldType.dropdown,
         options: ['سليم', 'غير سليم'],
         dependsOn: 'needs_renovation',
@@ -714,7 +748,8 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'electric_presence',
-        labelAr: 'الكهرباء والتيار الخفيف (إنارة, صوت, كاميرات إنذار حريق, قواطع)',
+        labelAr:
+            'الكهرباء والتيار الخفيف (إنارة, صوت, كاميرات إنذار حريق, قواطع)',
         type: FieldType.dropdown,
         options: ['موجود', 'غير موجود'],
         dependsOn: 'needs_renovation',
@@ -759,7 +794,8 @@ class FormSchemas {
       ),
       FormFieldSpec(
         id: 'water_condition',
-        labelAr: 'العوامل المائية (موضأ, حمامات, تصريف مطري, سقاية الحديقة, خزانات مياه ومضخات)',
+        labelAr:
+            'العوامل المائية (موضأ, حمامات, تصريف مطري, سقاية الحديقة, خزانات مياه ومضخات)',
         type: FieldType.dropdown,
         options: ['سليم', 'غير سليم'],
         dependsOn: 'needs_renovation',
@@ -778,6 +814,11 @@ class FormSchemas {
   static const expansion = FormSchema(
     typeId: 'expansion',
     fields: [
+      FormFieldSpec(
+        id: 'mosque_name',
+        labelAr: 'اسم المسجد',
+        type: FieldType.text,
+      ),
       FormFieldSpec(
         id: 'sharia_institute',
         labelAr: 'معهد شرعي',
