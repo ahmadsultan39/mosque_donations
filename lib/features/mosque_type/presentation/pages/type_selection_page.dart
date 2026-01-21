@@ -1,5 +1,10 @@
+import 'dart:io';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mosque_donations/features/mosque_type/presentation/widgets/type_tile_desktop.dart';
+import 'package:mosque_donations/features/mosque_type/presentation/widgets/type_tile_mobile.dart';
 
 import '../../../mosque_type/domain/mosque_types.dart';
 import '../bloc/mosque_type_bloc.dart';
@@ -27,50 +32,9 @@ class TypeSelectionPage extends StatelessWidget {
                   context.read<MosqueTypeBloc>().add(SelectMosqueType(t));
                   Navigator.of(context).pushNamed('/form', arguments: t);
                 },
-                child: Card(
-                  elevation: 2,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(12),
-                          child: SizedBox(
-                            width: 220,
-                            height: 140,
-                            child: Image.asset(
-                              t.imageUrl,
-                              fit: BoxFit.contain,
-                              errorBuilder: (_, __, ___) =>
-                                  Center(child: Icon(Icons.error, size: 48)),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: 20),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                t.nameAr,
-                                style: Theme.of(context).textTheme.titleLarge,
-                              ),
-                              const SizedBox(height: 8),
-                              Text(
-                                t.descriptionAr,
-                                style: Theme.of(context).textTheme.bodyLarge,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
+                child: !kIsWeb && Platform.isAndroid
+                    ? TypeTileMobile(t: t)
+                    : TypeTileDesktop(t: t),
               );
             },
           ),
