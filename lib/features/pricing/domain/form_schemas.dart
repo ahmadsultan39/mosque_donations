@@ -187,7 +187,7 @@ class FormSchemas {
         id: 'imam_house',
         labelAr: 'بيت إمام (عدد الشقق السكنية)',
         type: FieldType.dropdown,
-        options: ['1', '2', '3'],
+        options: ['0', '1', '2', '3'],
       ),
       FormFieldSpec(id: 'courtyard', labelAr: 'صحن', type: FieldType.boolean),
       FormFieldSpec(
@@ -202,7 +202,7 @@ class FormSchemas {
         id: 'shops',
         labelAr: 'محلات تجارية',
         type: FieldType.dropdown,
-        options: ['2', '3', '4'],
+        options: ['0', '2', '3', '4'],
       ),
       FormFieldSpec(
         id: 'shops_area',
@@ -383,7 +383,7 @@ class FormSchemas {
         id: 'imam_house',
         labelAr: 'بيت إمام (عدد الشقق السكنية)',
         type: FieldType.dropdown,
-        options: ['1', '2', '3'],
+        options: ['0', '1', '2', '3'],
       ),
       FormFieldSpec(id: 'courtyard', labelAr: 'صحن', type: FieldType.boolean),
       FormFieldSpec(
@@ -398,7 +398,7 @@ class FormSchemas {
         id: 'shops',
         labelAr: 'محلات تجارية',
         type: FieldType.dropdown,
-        options: ['2', '3', '4'],
+        options: ['0', '2', '3', '4'],
       ),
       FormFieldSpec(
         id: 'shops_area',
@@ -614,7 +614,7 @@ class FormSchemas {
         id: 'imam_house',
         labelAr: 'بيت إمام (عدد الشقق السكنية)',
         type: FieldType.dropdown,
-        options: ['1', '2', '3'],
+        options: ['0', '1', '2', '3'],
       ),
       FormFieldSpec(id: 'courtyard', labelAr: 'صحن', type: FieldType.boolean),
       FormFieldSpec(
@@ -629,7 +629,7 @@ class FormSchemas {
         id: 'shops',
         labelAr: 'محلات تجارية',
         type: FieldType.dropdown,
-        options: ['2', '3', '4'],
+        options: ['0', '2', '3', '4'],
       ),
       FormFieldSpec(
         id: 'shops_area',
@@ -829,7 +829,7 @@ class FormSchemas {
         id: 'imam_house',
         labelAr: 'بيت إمام (عدد الشقق السكنية)',
         type: FieldType.dropdown,
-        options: ['1', '2', '3'],
+        options: ['0', '1', '2', '3'],
       ),
       FormFieldSpec(id: 'courtyard', labelAr: 'صحن', type: FieldType.boolean),
       FormFieldSpec(
