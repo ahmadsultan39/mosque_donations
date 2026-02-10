@@ -14,6 +14,7 @@ import 'dart:async';
 import 'dart:io' show Platform;
 // import 'dart:math' as math;
 import 'package:media_store_plus/media_store_plus.dart';
+import 'package:excel/excel.dart';
 
 import '../../../mosque_type/domain/mosque_type.dart';
 import '../../domain/form_models.dart';
@@ -194,6 +195,109 @@ class _PricingFormPageState extends State<PricingFormPage> {
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(SnackBar(content: Text('فشل حفظ الصورة: $e')));
+    }
+  }
+
+  Future<void> _saveAsExcel() async {
+    final state = context.read<PricingBloc>().state;
+    final schema = state.schema;
+    if (schema == null) return;
+    final values = state.values;
+    final name = _fileSafeName(
+      "${values['mosque_name'] as String?}_${DateTime.now().toString()}",
+      'xlsx',
+    );
+    try {
+      final excel = Excel.createExcel();
+      const sheetName = 'Form';
+      excel.rename('Sheet1', sheetName);
+      final sheet = excel[sheetName];
+      sheet.appendRow([TextCellValue('الحقل'), TextCellValue('القيمة')]);
+      for (final f in schema.fields) {
+        if (!_isVisible(f, values)) continue;
+        final label = f.labelAr;
+        final raw = values[f.id];
+        String display;
+        if (raw == null) {
+          display = '';
+        } else {
+          switch (f.type) {
+            case FieldType.boolean:
+              final v = raw == true || raw == 'true';
+              display = v ? 'نعم' : 'لا';
+              break;
+            default:
+              display = raw.toString();
+              break;
+          }
+        }
+        sheet.appendRow([TextCellValue(label), TextCellValue(display)]);
+      }
+      if (state.submitted && state.totalPrice != null) {
+        final formatter = NumberFormat.decimalPattern('ar');
+        final formatted = formatter.format(state.totalPrice!.round());
+        sheet.appendRow([
+          TextCellValue('الكلفة التقديرية'),
+          TextCellValue(formatted),
+        ]);
+      }
+      final fileBytes = excel.save();
+      if (fileBytes == null) return;
+      final mime =
+          'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+      if (!kIsWeb && Platform.isAndroid) {
+        try {
+          await MediaStore.ensureInitialized();
+          MediaStore.appFolder = "MosqueDonations";
+          final tmpDir = await getTemporaryDirectory();
+          final tmpPath = '${tmpDir.path}/$name';
+          final temp = XFile.fromData(
+            Uint8List.fromList(fileBytes),
+            name: name,
+            mimeType: mime,
+          );
+          await temp.saveTo(tmpPath);
+          final mediaStore = MediaStore();
+          final saved = await mediaStore.saveFile(
+            tempFilePath: tmpPath,
+            dirType: DirType.download,
+            dirName: DirName.download,
+          );
+          if (saved != null) {
+            if (!mounted) return;
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(content: Text('تم حفظ الملف في مجلد التنزيلات')),
+            );
+            return;
+          }
+        } catch (_) {}
+      }
+      final file = XFile.fromData(
+        Uint8List.fromList(fileBytes),
+        name: name,
+        mimeType: mime,
+      );
+      final path = await _getSavePathWithFallback(
+        name,
+        const XTypeGroup(label: 'Excel', extensions: ['xlsx']),
+      );
+      if (path == null) {
+        if (!mounted) return;
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(const SnackBar(content: Text('تعذر تحديد مسار الحفظ')));
+        return;
+      }
+      await file.saveTo(path);
+      if (!mounted) return;
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text('تم حفظ الملف في: $path')));
+    } catch (e) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text('فشل حفظ الملف: $e')));
     }
   }
 
@@ -436,6 +540,12 @@ class _PricingFormPageState extends State<PricingFormPage> {
                             onPressed: _saveAsImage,
                             icon: const Icon(Icons.image),
                             label: const Text('حفظ كصورة'),
+                          ),
+                          const SizedBox(width: 12),
+                          OutlinedButton.icon(
+                            onPressed: _saveAsExcel,
+                            icon: const Icon(Icons.table_chart),
+                            label: const Text('حفظ كملف Excel'),
                           ),
                           // const SizedBox(width: 12),
                           // ElevatedButton.icon(
