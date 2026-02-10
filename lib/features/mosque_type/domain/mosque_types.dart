@@ -40,7 +40,9 @@ class MosqueTypes {
   static const expansion = MosqueType(
     id: 'expansion',
     nameAr: 'توسعة',
-    descriptionAr: "",
+    descriptionAr: '''
+المعهد الشرعي, والسكن, والصحن الخارجي, والمحلات التجارية.    
+    ''',
     imageUrl: 'assets/images/expansion.JPG',
   );
 
