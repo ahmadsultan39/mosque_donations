@@ -137,7 +137,10 @@ class _PricingFormPageState extends State<PricingFormPage> {
 
   Future<void> _saveAsImage() async {
     final values = context.read<PricingBloc>().state.values;
-    final name = _fileSafeName("${values['mosque_name'] as String?}_${DateTime.now().toString()}", 'png');
+    final name = _fileSafeName(
+      "${values['mosque_name'] as String?}_${DateTime.now().toString()}",
+      'png',
+    );
     final bytes = await _captureImageBytes();
     if (bytes == null) return;
     try {
@@ -457,7 +460,9 @@ class _PricingFormPageState extends State<PricingFormPage> {
     if (spec.dependsOn == null) return true;
     final depVal = values[spec.dependsOn];
     if (spec.dependsOnNotEmpty) {
-      return depVal != null && depVal.toString().isNotEmpty;
+      if (depVal == null) return false;
+      final s = depVal.toString();
+      return s.isNotEmpty && s != '0';
     }
     if (spec.dependsOnEquals != null) {
       return depVal == spec.dependsOnEquals;
